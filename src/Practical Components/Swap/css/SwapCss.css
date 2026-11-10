@@ -1,0 +1,424 @@
+/* =========================
+   SWAP PAGE
+========================= */
+
+.swap-page {
+  min-height: calc(100vh - 100px);
+  padding: 40px 20px 60px;
+  color: #f5f5f5;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.swap-page *,
+.swap-page *::before,
+.swap-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   SWAP CARD
+========================= */
+
+.swap-container {
+  width: 100%;
+  max-width: 520px;
+  margin: 20px auto;
+  padding: 30px;
+  background: #141414;
+  border: 1px solid #303030;
+  border-radius: 22px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.swap-page .swap-title {
+  margin: 0 0 30px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  text-align: center;
+}
+
+/* =========================
+   PAY / RECEIVE SECTIONS
+========================= */
+
+.swap-page .swap-section {
+  padding: 20px;
+  background: #1b1b1b;
+  border: 1px solid #353535;
+  border-radius: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.swap-page .swap-section:focus-within {
+  border-color: #ffbd83;
+}
+
+.swap-page .swap-label {
+  display: block;
+  margin-bottom: 14px;
+  color: #ffbd83;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* =========================
+   AMOUNT + TOKEN ROW
+========================= */
+
+.swap-page .swap-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  align-items: center;
+  gap: 12px;
+}
+
+.swap-page .swap-amount {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.swap-page .swap-amount::placeholder {
+  color: #666666;
+}
+
+.swap-page .swap-amount:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.swap-page .swap-amount[readonly] {
+  color: #ffcfaa;
+  cursor: default;
+}
+
+/* Remove number input arrows */
+
+.swap-page .swap-amount::-webkit-inner-spin-button,
+.swap-page .swap-amount::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.swap-page .swap-amount[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/* =========================
+   TOKEN SELECT
+========================= */
+
+.swap-page .swap-token-select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 10px;
+  background: #292929;
+  border: 1px solid #444444;
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.swap-page .swap-token-select:hover {
+  background: #333333;
+  border-color: #ffbd83;
+}
+
+.swap-page .swap-token-select:focus {
+  border-color: #ffbd83;
+  box-shadow: 0 0 0 3px rgba(255, 189, 131, 0.12);
+}
+
+.swap-page .swap-token-select option {
+  background: #1b1b1b;
+  color: #ffffff;
+}
+
+/* Balance text */
+
+.swap-page .swap-row p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  color: #a6a6a6;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================
+   SWAP DIRECTION
+========================= */
+
+.swap-page .swap-divider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 54px;
+}
+
+.swap-page .swap-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: #24201c;
+  border: 4px solid #141414;
+  border-radius: 13px;
+  color: #ffbd83;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.swap-page .swap-arrow:hover {
+  background: #38291e;
+  transform: translateY(2px);
+}
+
+/* =========================
+   SWAP DETAILS
+========================= */
+
+.swap-page .swap-details {
+  margin-top: 22px;
+  padding: 17px 18px;
+  background: #191919;
+  border: 1px solid #303030;
+  border-radius: 14px;
+}
+
+.swap-page .swap-details p {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  color: #bcbcbc;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.swap-page .swap-details p strong {
+  color: #ffffff;
+}
+
+.swap-page .swap-details p:first-child {
+  color: #d0d0d0;
+}
+
+/* =========================
+   SWAP BUTTON
+========================= */
+
+.swap-page .swap-button {
+  width: 100%;
+  min-height: 58px;
+  margin-top: 22px;
+  padding: 16px 20px;
+  background: #ffbd83;
+  border: 1px solid #ffbd83;
+  border-radius: 14px;
+  color: #17110c;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.swap-page .swap-button:hover:not(:disabled) {
+  background: #ffd0a8;
+  border-color: #ffd0a8;
+  box-shadow: 0 7px 22px rgba(255, 189, 131, 0.15);
+  transform: translateY(-2px);
+}
+
+.swap-page .swap-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.swap-page .swap-button:disabled {
+  background: #39332e;
+  border-color: #39332e;
+  color: #898079;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* =========================
+   TRANSACTION STATUS
+========================= */
+
+.swap-page .swap-details > * + * {
+  margin-top: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .swap-page {
+    padding: 20px 12px 40px;
+  }
+
+  .swap-container {
+    margin: 8px auto;
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .swap-page .swap-title {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+
+  .swap-page .swap-section {
+    padding: 15px 12px;
+  }
+
+  .swap-page .swap-row {
+    grid-template-columns: minmax(0, 1fr) 120px;
+    gap: 8px;
+  }
+
+  .swap-page .swap-amount {
+    font-size: 22px;
+  }
+
+  .swap-page .swap-token-select {
+    padding: 11px 7px;
+    font-size: 14px;
+  }
+
+  .swap-page .swap-details {
+    padding: 14px;
+  }
+
+  .swap-page .swap-details p {
+    font-size: 14px;
+  }
+
+  .swap-page .swap-button {
+    min-height: 54px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 360px) {
+  .swap-page .swap-row {
+    grid-template-columns: minmax(0, 1fr) 105px;
+  }
+
+  .swap-page .swap-amount {
+    font-size: 19px;
+  }
+}
+
+
+
+/* Transaction status */
+.swap-page .transaction-status {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #303030;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.swap-page .transaction-message {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.swap-page .confirming {
+  color: #ffbd83;
+}
+
+.swap-page .failed {
+  color: #ff7777;
+}
+
+.swap-page .status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ffbd83;
+}
+
+.swap-page .transaction-confirmed .status-dot {
+  background: #70d69a;
+}
+
+.swap-page .transaction-hash {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #929292;
+  font-size: 13px;
+}
+
+.swap-page .hash-value {
+  color: #dedede;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.swap-page .transaction-confirmed {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  color: #70d69a;
+  font-size: 13px;
+}
+
+.swap-page .transaction-confirmed a {
+  margin-left: auto;
+  color: #ffbd83;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.swap-page .transaction-confirmed a:hover {
+  color: #ffd2ad;
+  text-decoration: underline;
+}

@@ -1,0 +1,224 @@
+/* Main panel */
+.portfolio {
+  width: calc(100% - 48px);
+  max-width: 1400px;
+  margin: 28px auto;
+  padding: 28px;
+  box-sizing: border-box;
+  background: #111;
+  color: #f5f5f5;
+  border: 1px solid #2c2c2c;
+  border-radius: 18px;
+  font-family: inherit;
+}
+
+.portfolio-title {
+  margin: 0 0 26px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.portfolio h3 {
+  color: #fff;
+  font-size: 20px;
+  margin: 28px 0 16px;
+}
+
+/* Table */
+.portfolio-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #2b2b2b;
+  border-radius: 12px;
+}
+
+.portfolio-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.portfolio-table thead {
+  background: #1c1c1c;
+}
+
+.portfolio-table th {
+  padding: 18px;
+  color: #ffbd83;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+}
+
+.portfolio-table td {
+  padding: 19px 18px;
+  color: #e8e8e8;
+  font-size: 15px;
+  border-bottom: 1px solid #292929;
+}
+
+.portfolio-table tbody tr {
+  background: #111;
+  transition: background 0.2s;
+}
+
+.portfolio-table tbody tr:hover {
+  background: #202020;
+}
+
+.portfolio-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.portfolio-table .value-heading {
+  color: #ffbd83;
+}
+
+/* Token information */
+.portfolio-token {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 180px;
+}
+
+.portfolio-token-icon,
+.portfolio-token-placeholder {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.portfolio-token-icon {
+  object-fit: cover;
+  background: #262626;
+}
+
+.portfolio-token-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #30271f;
+  color: #ffbd83;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.portfolio-token-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.portfolio-token-name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.portfolio-token-symbol {
+  color: #a3a3a3;
+  font-size: 14px;
+}
+
+.portfolio-balance,
+.portfolio-value {
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+/* Empty states and messages */
+.portfolio-empty {
+  padding: 32px !important;
+  color: #a3a3a3 !important;
+  text-align: center;
+}
+
+.portfolio > p {
+  color: #d0d0d0;
+  font-size: 15px;
+}
+
+/* Overview links */
+.overview-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #ffbd83;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.overview-link:hover {
+  color: #ffd4b0;
+}
+
+.overview-section-title {
+  margin: 34px 0 18px !important;
+  font-size: 21px !important;
+}
+
+/* NFT table additions */
+.nft-table {
+  min-width: 950px;
+}
+
+.nft-table .nft-icon {
+  border-radius: 9px;
+}
+
+.nft-table .nft-description {
+  min-width: 260px;
+  max-width: 400px;
+  color: #b0b0b0;
+  white-space: normal;
+  line-height: 1.6;
+}
+
+.nft-address {
+  color: #ffbd83;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nft-address:hover {
+  color: #ffd4b0;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio {
+    width: calc(100% - 24px);
+    margin: 18px auto;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .portfolio-title {
+    font-size: 24px;
+  }
+
+  .portfolio-table th,
+  .portfolio-table td {
+    padding: 15px 12px;
+  }
+}
+.portfolio-status {
+  color: #ffbd83;
+  font-size: 15px;
+  padding: 12px 0;
+}
+
+.portfolio-error {
+  color: #ff7777;
+  font-size: 15px;
+  padding: 12px 0;
+}

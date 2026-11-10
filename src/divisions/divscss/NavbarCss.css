@@ -1,0 +1,241 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  min-height: 82px;
+  padding: 16px 36px;
+  background: #0b0b0b;
+  border-bottom: 1px solid #303030;
+  color: #f5f5f5;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.navbar *,
+.navbar *::before,
+.navbar *::after {
+  box-sizing: border-box;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.navbar-logo {
+  margin-right: 24px;
+  color: #ffbd83;
+  font-size: 27px;
+  font-weight: 850;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.navbar .navbar-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  color: #bdbdbd;
+  font-size: 16px;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.navbar .navbar-link:hover {
+  color: #ffffff;
+  background: #1b1b1b;
+}
+
+.navbar .navbar-link.active {
+  color: #ffbd83;
+  background: #241d17;
+  border-color: #403025;
+}
+
+/* =========================
+   PORTFOLIO DROPDOWN
+========================= */
+
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar .navbar-dropdown-trigger {
+  cursor: pointer;
+}
+
+.navbar .dropdown-arrow {
+  color: #ffbd83;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.navbar-dropdown:hover .dropdown-arrow,
+.navbar-dropdown:focus-within .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.navbar-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  z-index: 110;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 205px;
+  padding: 9px;
+  background: #141414;
+  border: 1px solid #353535;
+  border-radius: 14px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+.navbar-dropdown:hover .navbar-dropdown-menu,
+.navbar-dropdown:focus-within .navbar-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navbar .navbar-dropdown-item {
+  display: block;
+  padding: 12px 13px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: #c1c1c1;
+  font-size: 15px;
+  font-weight: 550;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.navbar .navbar-dropdown-item:hover {
+  background: #222222;
+  color: #ffffff;
+}
+
+.navbar .navbar-dropdown-item.active {
+  background: #292017;
+  color: #ffbd83;
+  border-color: #403025;
+}
+
+/* =========================
+   WALLET AREA
+========================= */
+
+.navbar-wallet {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 15px 20px;
+    gap: 14px;
+  }
+
+  .navbar-logo {
+    margin-right: 8px;
+    font-size: 24px;
+  }
+
+  .navbar-links {
+    gap: 4px;
+  }
+
+  .navbar .navbar-link {
+    padding: 11px 12px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px 16px;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    margin: 0 0 5px;
+    font-size: 26px;
+  }
+
+  .navbar .navbar-link {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .navbar-wallet {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .navbar-dropdown-menu {
+    left: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar-links {
+    gap: 3px;
+  }
+
+  .navbar .navbar-link {
+    padding: 9px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar *,
+  .navbar *::before,
+  .navbar *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

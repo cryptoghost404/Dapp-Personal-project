@@ -1,0 +1,84 @@
+body {
+  background-color: #000;
+}
+.overview-container {
+  width: calc(100% - 48px);
+  max-width: 1400px;
+  margin: 28px auto;
+  padding: 28px;
+  box-sizing: border-box;
+  background: #111;
+  color: #f5f5f5;
+  border: 1px solid #2c2c2c;
+  border-radius: 18px;
+}
+
+.overview-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.overview-section-header h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.overview-section-header a {
+  color: #ffbd83;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.overview-section-header a:hover {
+  color: #ffd4b0;
+}
+
+.overview-section .portfolio,
+.overview-section .transaction-history {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.overview-section .portfolio-title,
+.overview-section .transaction-history h2 {
+  display: none;
+}
+
+.overview-divider {
+  height: 1px;
+  background: #2c2c2c;
+  margin: 32px 0;
+}
+
+@media (max-width: 768px) {
+  .overview-container {
+    width: calc(100% - 24px);
+    margin: 18px auto;
+    padding: 18px;
+  }
+
+  .overview-section-header h2 {
+    font-size: 20px;
+  }
+
+  .overview-section-header a {
+    font-size: 13px;
+  }
+
+  .overview-divider {
+    margin: 24px 0;
+  }
+}

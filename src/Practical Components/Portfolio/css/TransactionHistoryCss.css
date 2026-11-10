@@ -1,0 +1,280 @@
+.transaction-history {
+  width: calc(100% - 48px);
+  max-width: 1400px;
+  margin: 28px auto;
+  padding: 28px;
+  box-sizing: border-box;
+  background: #111;
+  color: #f5f5f5;
+  border: 1px solid #2c2c2c;
+  border-radius: 18px;
+  font-family: inherit;
+}
+
+.transaction-history h2 {
+  margin: 0 0 26px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Main transaction card */
+
+.transaction {
+  background: #1c1c1c;
+  border: 1.5px solid #4a4038;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.transaction:hover {
+  border-color: #b8875b;
+  background: #202020;
+}
+
+.transaction-left {
+  width: 100%;
+}
+
+/* Each activity */
+
+.activity-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 15px;
+  padding: 12px 0;
+  position: relative;
+}
+
+.activity-item:not(:last-child) {
+  border-bottom: 1px solid #303030;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+/* Activity heading */
+
+.activity-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.direction {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.direction.sent {
+  color: #ff8c72;
+}
+
+.direction.received {
+  color: #55d69e;
+}
+
+.direction.other {
+  color: #ffbd83;
+}
+
+/* Status */
+
+.status {
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status.success {
+  color: #55d69e;
+  background: #17372a;
+}
+
+.status.failed {
+  color: #ff7777;
+  background: #3b2020;
+}
+
+.status.pending {
+  color: #f5c76b;
+  background: #3a3020;
+}
+
+/* Token information */
+
+.token-information {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.token-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #292929;
+}
+
+.token-name {
+  margin: 0 0 4px;
+  color: #f5f5f5;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.token-symbol {
+  color: #d6a66f;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* Wallet addresses */
+
+.activity-addresses p {
+  margin: 5px 0;
+  color: #999;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.activity-addresses span {
+  color: #c5c5c5;
+  font-weight: 600;
+}
+
+/* Amount on the right */
+
+.activity-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-width: 130px;
+  padding-top: 20px;
+}
+
+.amount {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.amount-symbol {
+  color: #d6a66f;
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 3px;
+}
+
+
+
+/* Bottom footer: Date left, transaction link right */
+
+.transaction-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #514437;
+}
+
+.transaction-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #929292;
+  font-size: 13px;
+}
+
+.transaction-date span {
+  color: #d6a66f;
+  font-size: 17px;
+}
+
+.view-transaction {
+  margin: 0;
+  color: #ffbd83;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.view-transaction:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+
+
+/* Loading and error messages */
+
+.transaction-status {
+  color: #aaa;
+}
+
+.transaction-error {
+  color: #ff7777;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+
+  .transaction-history {
+    width: calc(100% - 24px);
+    margin: 18px auto;
+    padding: 18px;
+  }
+
+  .transaction-history h2 {
+    font-size: 23px;
+  }
+
+  .transaction {
+    padding: 15px;
+  }
+
+  .activity-item {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+
+  .activity-amount {
+    min-width: 95px;
+  }
+
+  .amount {
+    font-size: 19px;
+  }
+
+  .activity-addresses p {
+    font-size: 10px;
+  }
+
+  .token-name {
+    font-size: 13px;
+  }
+
+  .view-transaction {
+    font-size: 11px;
+  }
+}
